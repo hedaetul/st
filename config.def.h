@@ -18,7 +18,7 @@ static int borderpx = 0;
  * 5: value of shell in config.h
  */
 static char *shell = "/bin/sh";
-char *utmp = NULL;
+char *utmp = "/usr/bin/fish";
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
 /* identification sequence returned in DA and DECID */
@@ -61,7 +61,7 @@ static uint su_timeout = 200;
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
  */
-static unsigned int blinktimeout = 800;
+static unsigned int blinktimeout = 400;
 
 /*
  * interval (in milliseconds) between each successive call to ximspot. This
@@ -73,7 +73,8 @@ int ximspot_update_interval = 1000;
 /*
  * thickness of underline and bar cursors
  */
-static unsigned int cursorthickness = 2;
+static unsigned int cursorthickness = 3;
+
 
 /*
  * 1: render most of the lines/blocks characters without using the font for
@@ -165,13 +166,13 @@ unsigned int defaultrcs = 257;
  * 7: Blinking st cursor
  * 8: Steady st cursor
  */
-static unsigned int cursorshape = 1;
+static unsigned int cursorshape = 3;
 
 /*
  * Default columns and rows numbers
  */
 
-static unsigned int cols = 80;
+static unsigned int cols = 90;
 static unsigned int rows = 24;
 
 /*
